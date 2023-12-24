@@ -1,0 +1,126 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Gilroy";
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(180, 12, 180);
+  display: flex;
+  padding-top: 10vw;
+  align-items: flex-start;
+  justify-content: center;
+}
+.task-tracker {
+  /* height: 500px; */
+  width: 400px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+.head {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+.task-tracker h2 {
+  font-size: 1.5vw;
+  font-weight: bold;
+  padding: 15px;
+  color: rgb(7, 89, 136);
+  margin-top: 15px;
+}
+.task-tracker img {
+  height: 50px;
+  width: 40px;
+  padding-top: 15px;
+}
+.task-field {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.task-field input {
+  width: 260px;
+  border-radius: 100px;
+  border: 0;
+  outline: 0;
+  padding: 12px;
+  font-size: 1.2vw;
+  background-color: #c2c2c2;
+}
+.task-field input::placeholder{
+    color: #000;
+}
+.task-field button{
+    padding: 15px;
+    border-radius: 100px;
+    background-color: rgb(15, 129, 196);
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    color: #fff;
+}
+.task-field button:hover{
+    background-color: rgb(3, 53, 82);
+}
+.task-field button:active{
+    scale: .98;
+}
+.task-list{
+    margin-left: 50px;
+}
+.task-list  li{
+    list-style: none;
+    position: relative;
+    font-size: 1.3vw;
+    margin: 20px 0px;
+    cursor: pointer;
+}
+.task-list li::before{
+    content: '';
+    position: absolute;
+    top: -25%;
+    left: -10%;
+    height: 30px;
+    width: 30px;
+    background-image: url("./uncheck.png");
+    background-size: cover;
+}
+.task-list  li.checked{
+    text-decoration: line-through;
+}
+
+.task-list  li.checked::before{
+    content: '';
+    position: absolute;
+    top: -25%;
+    left: -10%;
+    height: 30px;
+    width: 30px;
+    background-image: url("./check.png");
+    background-size: cover;
+}
+.task-list  li span{
+    position: absolute;
+    right: 10%;
+    top: -20%;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.task-list  li span:hover{
+    background-color: #333;
+    border-radius: 50%;
+    color: #fff;
+}
